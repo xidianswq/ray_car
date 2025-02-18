@@ -1,0 +1,28 @@
+## kill.bat内删除的文件——针对stm32工程
+*.bak 
+*.ddk 
+*.edk 
+*.lst 
+*.lnp 
+*.mpf 
+*.mpj 
+*.obj 
+*.omf 
+## 不允许删除JLINK的设置
+! *.opt   
+*.plg 
+*.rpt 
+*.tmp 
+*.__i 
+*.crf 
+*.o 
+*.d 
+*.axf 
+*.tra 
+*.dep            
+JLinkLog.txt 
+
+*.iex 
+*.htm 
+*.sct 
+*.map 
