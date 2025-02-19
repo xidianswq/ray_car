@@ -281,8 +281,8 @@ int Get_Nano_PWM(void)
 {
 	int state=0,i,j;
 	for(i=0;i<2;i++){
-		for(j=0;j<4;j++){
-			if(is_num(USART_RX_INFO[i*5+j+1]))continue;
+		for(j=0;j<3;j++){
+			if(is_num(USART_RX_INFO[i*4+j+1]))continue;
 			else return state;
 		}
 	}
