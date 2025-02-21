@@ -11,8 +11,8 @@ void Red_Ray_Init(void)
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 	GPIO_ResetBits(GPIOA,GPIO_Pin_15);
-	delay_ms(10);
-	GPIO_SetBits(GPIOA,GPIO_Pin_15);
+	// delay_ms(10);
+	// GPIO_SetBits(GPIOA,GPIO_Pin_15);
 }
 
 void Red_Ray_Off(void)

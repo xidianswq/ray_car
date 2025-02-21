@@ -27,12 +27,19 @@
 #define ALLLED_OFF_H 0xFD
 
 #define SERVO000	130 		//0度对应4096的脉宽计数值
-#define SERVO090    325			//90度对应4096的脉宽计数值
+#define SERVO090    335			//90度对应4096的脉宽计数值
 #define SERVO180	520 		//180度对应4096的脉宽计算值
+#define SERVO_X_RANGE   80
+#define SERVO_X_MIN     SERVO090 - SERVO_X_RANGE     //X轴最左角度
+#define SERVO_X_MAX     SERVO090 + SERVO_X_RANGE     //X轴最右角度
+#define SERVO_Y_MIN     325     //Y轴最前角度
+#define SERVO_Y_MAX     422     //Y轴最后角度
 #define SERVO_L_RANGE	100		//限制水平旋转范围
 #define SERVO_V_RANGE   150	 	//限制垂直旋转范围
 #define SERVOSUB	390			//0度到90度的4096脉宽差		
-#define SERVOADJUST 325			//矫正初值使水平(安装时误差)
+// #define SERVOADJUST 330			//矫正初值使水平(安装时误差)
+#define SERVOADJUST 375			//矫正初值使水平(安装时误差)
+#define SERVO_Y_CENTER SERVOADJUST
 
 extern int Off_L;				//水平舵机当前设定pwm的off值
 extern int Off_V;				//竖直舵机当前设定pwm的off值
@@ -49,5 +56,9 @@ void Set_Angle_Vert(float angle);
 void Follow_Point(void);
 int Get_Point_Pos(void);
 void JoyStick_Control(void);
+
+
+void Set_Pwm_X(int x);
+void Set_Pwm_Y(int y);
 
 #endif
