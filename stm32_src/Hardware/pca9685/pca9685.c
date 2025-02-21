@@ -239,10 +239,10 @@ void Follow_Point(void)
 {
     int Get_Point_Pos(void);
 
-    int diff_x, diff_y;
+//    int diff_x, diff_y;
     while (Follow_Point_Stop_Sign) {
         if (Get_Point_Pos() == 2) {
-			GPIO_SetBits(GPIOB,GPIO_Pin_14);
+			GPIO_SetBits(GPIOB,GPIO_Pin_14);	//beep
 			delay_ms(10);
 			GPIO_ResetBits(GPIOB,GPIO_Pin_14);
 			Set_Pwm_X(x);

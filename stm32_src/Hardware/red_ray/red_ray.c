@@ -10,7 +10,8 @@ void Red_Ray_Init(void)
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
-	GPIO_ResetBits(GPIOA,GPIO_Pin_15);
+	Red_Ray_Off();
+	//GPIO_ResetBits(GPIOA,GPIO_Pin_15);
 	// delay_ms(10);
 	// GPIO_SetBits(GPIOA,GPIO_Pin_15);
 }

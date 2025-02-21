@@ -86,6 +86,7 @@ void ray_cvcar(void){
 		
 		if(RxPackFlag==1){
 			RxPackFlag=0;
+			Dc_Motor_Stop();
 			Follow_Point();
 		}
 	}
