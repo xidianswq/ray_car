@@ -98,9 +98,11 @@ void ray_cvcar(void){
 			if((system_tick-system_tick_temp)<=50)
 			{
 				Nano_SetPWM();
+				Red_Ray_On();
 			}
 			else{
 				updata_sign=1;
+				Red_Ray_Off();
 				Dc_Motor_Go();
 			}
 			RxPackFlag=0;
